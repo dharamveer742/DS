@@ -1,4 +1,4 @@
-package Recursion.Iterative;
+package Recursion;
 
 public class digitReverse {
 
