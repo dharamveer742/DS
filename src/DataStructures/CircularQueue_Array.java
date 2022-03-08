@@ -1,6 +1,6 @@
 // circular queue by array
 
-package Practise;
+package DataStructures;
 
 public class CircularQueue_Array {
 

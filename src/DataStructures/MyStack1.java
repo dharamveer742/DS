@@ -1,7 +1,7 @@
 
 // Implementation of stack using linkedList
 
-package Practise;
+package DataStructures;
 
 public class MyStack1 {
     Stacknode top ;

@@ -1,4 +1,4 @@
-package Practise;
+package DataStructures;
 
 
 //  Singly using array

@@ -1,4 +1,4 @@
-package Practise;
+package DataStructures;
 
 public class DoublyLinked {
     Student head;

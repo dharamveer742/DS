@@ -1,7 +1,7 @@
 
 // Singly queue by array
 
-package Practise;
+package DataStructures;
 
 public class My_Queue2 {
     int[] arr;

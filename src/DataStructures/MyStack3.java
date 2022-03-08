@@ -1,7 +1,7 @@
 
 // Implementation of stack by using array
 
-package Practise;
+package DataStructures;
 public class MyStack3 {
     int[] arr;
     int size;

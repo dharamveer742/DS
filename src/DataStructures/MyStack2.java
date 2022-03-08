@@ -1,6 +1,4 @@
-package Practise;
-
-import java.util.Scanner;
+package DataStructures;
 
 import java.util.Scanner;
 

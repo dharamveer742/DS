@@ -2,7 +2,7 @@
 // Circular queue by linkedList
 
 
-package Practise;
+package DataStructures;
 
 public class CircularQueue {
     Node front;

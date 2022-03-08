@@ -1,6 +1,6 @@
 // Java program to traverse,size,insert,delete an node in linked list
 
-package Practise;
+package DataStructures;
 
 import java.util.Scanner;
 

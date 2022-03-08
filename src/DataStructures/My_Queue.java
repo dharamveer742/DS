@@ -1,5 +1,5 @@
 // Singly queue by linkedList
-package Practise;
+package DataStructures;
 
 public class My_Queue {
     Node front;
