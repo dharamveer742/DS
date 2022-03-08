@@ -1,7 +1,8 @@
+// Singly queue by linkedList
 package Practise;
 
 public class My_Queue {
-    Node head;
+    Node front;
     Node rear;
 
     class Node{
@@ -15,37 +16,28 @@ public class My_Queue {
 
     public void enqueue(int a){          // offer()
         Node ne = new Node(a);
-        if(head==null){
-            head=ne;
+        if(front==null){
+            front=rear=ne;
             return;
         }
-        Node current =head;
-
-        while(current.next!=null);{
-            current=current.next;
-
-        }
-        current.next=ne;
+        rear.next=ne;
+        rear=ne;
     }
 
     public void dequeue(){                  // poll()
-        if(head==null ){
-            System.out.println("error");
+        if(front==null ){
+            System.out.println("empty");
             return;
         }
-        head=head.next;
+        front=front.next;
 
     }
     public void peek(){                  // peek() method does not throw exception
-        if(head == null){
+        if(front == null){
             System.out.println("Queue is empty");
             return;
         }
-        Node temp=head ;
-        while(temp!=null){
-            System.out.println(temp.value);
-            temp=temp.next;
-        }
+        System.out.println(front.value);
     }
 
     public static void main(String[] args) {
@@ -53,11 +45,11 @@ public class My_Queue {
         My_Queue on = new My_Queue();
 
         on.enqueue(4);
-       // on.enqueue(4);
+        on.enqueue(5);
         on.dequeue();
         on.peek();
-
-
+        on.dequeue();
+        on.dequeue();
 
 
 

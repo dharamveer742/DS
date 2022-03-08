@@ -166,7 +166,8 @@ public class My_LinkedList {
         System.out.println(size);
     }
 
-    public void TraverseList() {
+    public void TraverseList(Node b) {
+         head = b;
         if (head == null) {
             System.out.println(" List is empty");
             return;
@@ -176,6 +177,23 @@ public class My_LinkedList {
             System.out.println(current.roll_no);
             current = current.next;
         }
+        System.out.println("null");
+    }
+
+
+    public Node reverse(Node head) {
+        Node pre = null;
+        Node curr = head;
+        while (curr!= null) {
+            Node next = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = next;
+        }
+        Node c = pre;
+        return c;
+
+
     }
 
 
@@ -187,13 +205,13 @@ public class My_LinkedList {
             System.out.println("Enter 1 to add an element in the starting of  a List");
             System.out.println("Enter 2 to add an element in the last of  a List");
             System.out.println("press 3 to add an element at a given position in the list");
-            System.out.println("Enter 4 to print element of the List");
-            System.out.println("Enter 5 to get the size of list");
-            System.out.println("Enter 6 to delete an element in starting of the List");
-            System.out.println("Enter 7 to delete last element of the List");
-            System.out.println("Enter 8 to delete the element at a given position of list ");
-
-            System.out.println("Press 9 to exit from menu");
+            System.out.println("Enter 4 to get the size of list");
+            System.out.println("Enter 5 to delete an element in starting of the List");
+            System.out.println("Enter 6 to delete last element of the List");
+            System.out.println("Enter 7 to delete the element at a given position of list ");
+            System.out.println("Press 8 to traverse the list  ");
+            System.out.println("Press 9 to traverse the linkedList in reverse order");
+            System.out.println("Press 10 to exit from menu");
             System.out.println();
 
 
@@ -203,15 +221,24 @@ public class My_LinkedList {
             switch (choice) {
                 case 1 -> List.AddFirst(sc.nextInt());
                 case 2 -> List.AddLast(sc.nextInt());
-                case 3 -> List.Add(sc.nextInt(),sc.nextInt());
-                case 4 -> List.TraverseList();
-                case 5 -> List.ListSize();
-                case 6 -> List.DeleteFirst();
-                case 7 -> List.DeleteLast();
-                case 8 -> List.Delete(sc.nextInt());
-                case 9 -> System.exit(0);
+                case 3 -> List.Add(sc.nextInt(), sc.nextInt());
+                case 4 -> List.ListSize();
+                case 5 -> List.DeleteFirst();
+                case 6 -> List.DeleteLast();
+                case 7 -> List.Delete(sc.nextInt());
+                case 8 -> List.TraverseList(List.head);
+                case 9 -> List.TraverseList(List.reverse(List.head));
+                case 10 -> System.exit(0);
                 default -> System.out.println("Wrong choice");
             }
+
+            List.TraverseList(List.reverse(List.head));
+
+
         }
     }
+
+
 }
+
+

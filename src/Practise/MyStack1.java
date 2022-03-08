@@ -27,6 +27,18 @@ public class MyStack1 {
         return top==null;
 
         }
+        public void Traverse(){
+        if(top==null){
+            System.out.println("Empty");
+            return ;
+        }
+        Stacknode temp=top;
+        while(temp!=null){
+            System.out.print(temp.value+" ");
+            temp=temp.next;
+        }
+        System.out.println();
+        }
         public int peek() {
             if(top==null){
                 System.out.println("Empty stack");
@@ -38,9 +50,8 @@ public class MyStack1 {
         }
         public int pop(){
             if(top==null){
-                System.out.println("Empty stack");
+                System.out.println("Empty stack can't pop");
                 return -1;
-
             }
             int res =top.value;
             top=top.next;
@@ -49,21 +60,17 @@ public class MyStack1 {
 
         public static void main(String[] args) {
             MyStack1 ov = new MyStack1();
-              ov.push(4);
-              ov.push(44);
-              ov.push(9);
+            ov.push(4);
+            ov.push(44);
+            ov.push(9);
+            ov.pop();
 
+            ov.Traverse();
 
-            System.out.println(ov.peek());
-
-
-            System.out.println(ov.pop());
-            System.out.println(ov.pop());
-            System.out.println(ov.pop());
-
-            System.out.println(ov.peek());
-
-            System.out.println(ov.peek());
+            ov.pop();
+            ov.pop();
+            System.out.println();
+            ov.Traverse();
 
 
         }
