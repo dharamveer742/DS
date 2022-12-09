@@ -1,4 +1,4 @@
-package DataStructures;
+package DataStructures.Tree;
 
 public class BST {
 
