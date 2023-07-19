@@ -196,6 +196,16 @@ public class My_LinkedList {
 
     }
 
+    public Node recursiveReverse(Node head){
+        if(head==null || head.next==null){  // head recursion
+            return head;
+        }
+        Node newHead = recursiveReverse(head.next);
+        head.next.next=head;
+        head.next=null;
+        return newHead;
+    }
+
 
     public static void main(String[] args) {
         My_LinkedList List = new My_LinkedList();
